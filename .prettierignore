@@ -1,0 +1,7 @@
+coverage
+node_modules
+build
+cache
+public/static
+bitbucket-pipelines.yml
+deploy

@@ -1,0 +1,25 @@
+@import "styles/colors";
+
+.root {
+  padding: 40px 0;
+  background: #f9f9f9;
+}
+
+.wrapper {
+  background: #dddddd;
+  max-width: 1272px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  justify-content: center;
+
+  @media (max-width: 1272px) {
+    max-width: 636px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  > svg {
+    background: #f9f9f9;
+  }
+}

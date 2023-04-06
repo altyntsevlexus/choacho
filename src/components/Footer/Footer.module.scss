@@ -1,0 +1,42 @@
+@import "styles/colors";
+
+.root {
+  background-color: $black;
+  padding: 80px 0;
+}
+
+.wrapper {
+  max-width: 1272px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  path {
+    fill: white;
+  }
+}
+
+.contactDetails {
+  border: 2px solid $primary-dark;
+  color: white;
+  padding: 12px 100px;
+  font-size: 20px;
+  line-height: 28px;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+
+.socials {
+  fill: white;
+  transition-duration: 0.2s;
+
+  &:hover {
+    fill: $primary-dark;
+  }
+}

@@ -1,0 +1,58 @@
+@import "styles/colors";
+
+.root {
+  padding: 40px 0 80px;
+  background: linear-gradient(180deg, #d9d9d900, #d9d9d930);
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.description {
+  max-width: 440px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+
+.list {
+  max-width: 500px;
+}
+
+.item {
+  height: 120px;
+  display: flex;
+
+  &:not(:last-of-type) {
+    margin-bottom: 60px;
+  }
+
+  &Image {
+    margin-right: 24px;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  &Title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  &Description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

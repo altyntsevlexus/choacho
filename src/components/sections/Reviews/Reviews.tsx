@@ -1,0 +1,59 @@
+import React from "react";
+
+import Man from "images/man.inline.svg";
+import Woman from "images/woman.inline.svg";
+
+import * as styles from "./Reviews.module.scss";
+
+const Reviews = () => (
+  <section className={styles.root}>
+    <div className={styles.wrapper}>
+      <h3 className={styles.title}>Що про нас кажуть клієнти?</h3>
+      <ul className={styles.list}>
+        <li className={styles.listItem}>
+          <div className={styles.review}>
+            <p className={styles.itemDescription}>
+              Це була найкраща шоколадка, яку я коли-небудь їв! Смак був
+              настільки насиченим та багатим, що я міг смакувати його довго
+              після того, як зʼїв кусочок. Крім того, шоколад танув в роті, що
+              робило його ще більш приємним у вживанні. Я б точно рекомендував
+              цей шоколад усім, хто любить насолоджуватися вишуканими смаками та
+              якісними продуктами.
+            </p>
+            <div className={styles.reviewer}>
+              <Man width={60} height={60} className={styles.reviewerImage} />
+              <div>
+                <p className={styles.reviewerName}>Євген Авраменко</p>
+                <p className={styles.reviewerPosition}>Постійний клієнт</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li className={styles.listItem}>
+          <div className={styles.review}>
+            <p className={styles.itemDescription}>
+              Ми замовили цей шоколад для нашого корпоративного подарунку та
+              були дуже задоволені результатом. Шоколад мав вишуканий смак та
+              насичений аромат, що сподобалося всім отримувачам подарунка. Крім
+              того, на упаковці була ншаша ембелма, що додало до загального
+              враження від подарунка. Консультації з питань замовлення та
+              доставки були дуже швидкими та професійними. Дякуємо за чудовий
+              шоколадний досвід!
+            </p>
+            <div className={styles.reviewer}>
+              <Woman width={60} height={60} className={styles.reviewerImage} />
+              <div>
+                <p className={styles.reviewerName}>Богдана Златова</p>
+                <p className={styles.reviewerPosition}>
+                  HR менеджер в Privat Bank
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+);
+
+export default Reviews;

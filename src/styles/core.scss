@@ -1,0 +1,29 @@
+@import "colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MacPaw", sans-serif;
+  color: $black;
+  font-weight: 400;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+@font-face {
+  font-family: "MacPaw";
+  font-weight: 700;
+  src: url(/fonts/macPawFixelText-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "MacPaw";
+  font-weight: 400;
+  src: url(/fonts/macPawFixelText-Medium.woff2) format("woff2");
+}

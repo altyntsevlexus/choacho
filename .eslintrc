@@ -1,0 +1,59 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "react-app",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/react",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "ignorePatterns": ["config"],
+  "rules": {
+    "no-plusplus": 0,
+    "no-param-reassign": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/quotes": 0,
+    "@typescript-eslint/comma-dangle": 0,
+    "@typescript-eslint/naming-convention": 0,
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/destructuring-assignment": 0,
+    "newline-after-var": ["error", "always"],
+    "import/prefer-default-export": 0,
+    "no-console": ["warn", { "allow": ["error"] }],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/no-cycle": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "tests/"] }
+    ]
+  },
+
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
+}
