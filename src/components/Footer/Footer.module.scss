@@ -1,31 +1,78 @@
-@import "styles/colors";
+@import "styles/variables";
+@import "styles/mixins";
 
 .root {
   background-color: $black;
-  padding: 80px 0;
+  padding: 40px 0;
+
+  @include tablet-big {
+    padding: 80px 0;
+  }
 }
 
 .wrapper {
-  max-width: 1272px;
+  max-width: 1172px;
+  padding: 0 20px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @include tablet-big {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .logo {
+  margin-bottom: 20px;
+
+  @include tablet-big {
+    margin-bottom: 0;
+  }
+
   path {
     fill: white;
   }
 }
 
 .contactDetails {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include tablet-big {
+    margin: 0;
+    flex-direction: row;
+  }
+}
+
+.button {
   border: 2px solid $primary-dark;
   color: white;
-  padding: 12px 100px;
+  padding: 12px;
   font-size: 20px;
   line-height: 28px;
   transition-duration: 0.2s;
+  width: 220px;
+  text-align: center;
+
+  @include mobile {
+    width: 360px;
+  }
+
+  &:first-of-type {
+    margin-bottom: 20px;
+
+    @include tablet-big {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
 
   &:hover {
     background-color: $primary-dark;

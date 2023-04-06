@@ -12,7 +12,7 @@ const Reviews = () => (
       <ul className={styles.list}>
         <li className={styles.listItem}>
           <div className={styles.review}>
-            <p className={styles.itemDescription}>
+            <p className={styles.reviewDescription}>
               Це була найкраща шоколадка, яку я коли-небудь їв! Смак був
               настільки насиченим та багатим, що я міг смакувати його довго
               після того, як зʼїв кусочок. Крім того, шоколад танув в роті, що
@@ -31,7 +31,7 @@ const Reviews = () => (
         </li>
         <li className={styles.listItem}>
           <div className={styles.review}>
-            <p className={styles.itemDescription}>
+            <p className={styles.reviewDescription}>
               Ми замовили цей шоколад для нашого корпоративного подарунку та
               були дуже задоволені результатом. Шоколад мав вишуканий смак та
               насичений аромат, що сподобалося всім отримувачам подарунка. Крім

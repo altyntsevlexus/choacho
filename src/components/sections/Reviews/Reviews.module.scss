@@ -1,13 +1,19 @@
-@import "styles/colors";
+@import "styles/variables";
+@import "styles/mixins";
 
 .root {
   padding: 80px 0;
 }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 1172px;
+  padding: 0 20px;
   width: 100%;
   margin: 0 auto;
+
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .title {
@@ -15,29 +21,44 @@
   font-weight: 800;
   line-height: 48px;
   margin-bottom: 40px;
+  text-align: center;
+
+  @include tablet-big {
+    text-align: left;
+  }
 }
 
 .list {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: 0 41px;
+
+  @include tablet-big {
+    align-items: initial;
+    flex-direction: row;
+  }
 
   &Item {
     list-style-image: url("~images/quote.svg");
     padding-left: 40px;
+
+    &:first-of-type {
+      margin-bottom: 40px;
+    }
   }
 }
 
 .review {
   height: 100%;
-  max-width: 500px;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
 
   &Description {
     font-size: 16px;
     line-height: 24px;
-    min-height: 140px;
     margin-bottom: 20px;
   }
 }

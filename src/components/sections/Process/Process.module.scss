@@ -1,17 +1,27 @@
-@import "styles/colors";
+@import "styles/variables";
+@import "styles/mixins";
 
 .root {
-  padding: 40px 0 80px;
+  padding: 80px 0;
   background: linear-gradient(180deg, #d9d9d900, #d9d9d930);
 }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 1172px;
+  padding: 0 20px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.logo {
+  margin-right: 20px;
 }
 
 .description {
@@ -55,4 +65,11 @@
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+.highlighted {
+  color: $primary;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 52px;
 }

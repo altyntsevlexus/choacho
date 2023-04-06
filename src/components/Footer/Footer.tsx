@@ -9,12 +9,14 @@ const Footer = () => (
   <footer className={styles.root} id="footer">
     <div className={styles.wrapper}>
       <Logo size={60} className={styles.logo} />
-      <a className={styles.contactDetails} href="mailto:email@mail.com">
-        email@mail.com
-      </a>
-      <a className={styles.contactDetails} href="tel:0667495569">
-        066 749 55 69
-      </a>
+      <div className={styles.contactDetails}>
+        <a className={styles.button} href="mailto:email@mail.com">
+          email@mail.com
+        </a>
+        <a className={styles.button} href="tel:0667495569">
+          066 749 55 69
+        </a>
+      </div>
       <a
         href="https://www.instagram.com/cho_a_cho/"
         rel="noopener noreferrer"
