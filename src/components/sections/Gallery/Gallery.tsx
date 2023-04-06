@@ -9,7 +9,7 @@ const Gallery = () => {
   const isTablet = useMediaQuery("(min-width: 768px)");
 
   return (
-    <section className={styles.root}>
+    <section>
       <div className={styles.wrapper}>
         <StaticImage src="../../../images/gallery-1.jpg" alt="" />
         <StaticImage

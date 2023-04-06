@@ -54,6 +54,10 @@
 
     &:first-of-type {
       margin-bottom: 40px;
+
+      @include tablet {
+        margin: 0;
+      }
     }
   }
 }
