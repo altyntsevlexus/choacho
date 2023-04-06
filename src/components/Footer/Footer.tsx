@@ -10,11 +10,11 @@ const Footer = () => (
     <div className={styles.wrapper}>
       <Logo size={60} className={styles.logo} />
       <div className={styles.contactDetails}>
-        <a className={styles.button} href="mailto:email@mail.com">
-          email@mail.com
+        <a className={styles.button} href="mailto:choacho57@gmail.com">
+          choacho57@gmail.com
         </a>
         <a className={styles.button} href="tel:0667495569">
-          066 749 55 69
+          067 138 52 82
         </a>
       </div>
       <a

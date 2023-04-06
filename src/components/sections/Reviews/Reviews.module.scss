@@ -33,7 +33,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0 41px;
+  padding: 0 0 0 41px;
+
+  @include tablet {
+    padding: 0 41px;
+  }
 
   @include tablet-big {
     align-items: initial;
@@ -42,7 +46,11 @@
 
   &Item {
     list-style-image: url("~images/quote.svg");
-    padding-left: 40px;
+    padding-left: 12px;
+
+    @include tablet {
+      padding-left: 40px;
+    }
 
     &:first-of-type {
       margin-bottom: 40px;

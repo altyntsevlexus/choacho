@@ -40,8 +40,12 @@
 }
 
 .item {
-  height: 120px;
+  height: auto;
   display: flex;
+
+  @include tablet {
+    height: 120px;
+  }
 
   &:not(:last-of-type) {
     margin-bottom: 60px;
