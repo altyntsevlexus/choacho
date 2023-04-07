@@ -1,7 +1,5 @@
 import React from "react";
-
-import Man from "images/man.inline.svg";
-import Woman from "images/woman.inline.svg";
+import { StaticImage } from "gatsby-plugin-image";
 
 import * as styles from "./Reviews.module.scss";
 
@@ -21,7 +19,13 @@ const Reviews = () => (
               якісними продуктами.
             </p>
             <div className={styles.reviewer}>
-              <Man width={60} height={60} className={styles.reviewerImage} />
+              <StaticImage
+                src="../../../images/man.jpg"
+                alt="man"
+                width={60}
+                height={60}
+                className={styles.reviewerImage}
+              />
               <div>
                 <p className={styles.reviewerName}>Євген Авраменко</p>
                 <p className={styles.reviewerPosition}>Постійний клієнт</p>
@@ -41,7 +45,13 @@ const Reviews = () => (
               шоколадний досвід!
             </p>
             <div className={styles.reviewer}>
-              <Woman width={60} height={60} className={styles.reviewerImage} />
+              <StaticImage
+                src="../../../images/woman.jpg"
+                alt="woman"
+                width={60}
+                height={60}
+                className={styles.reviewerImage}
+              />
               <div>
                 <p className={styles.reviewerName}>Богдана Златова</p>
                 <p className={styles.reviewerPosition}>

@@ -4,7 +4,6 @@ import Layout from "components/Layout";
 import Seo from "components/Seo";
 import {
   Hero,
-  Services,
   Intro,
   Gallery,
   Process,
@@ -16,7 +15,6 @@ const MainPage = () => (
   <Layout>
     <main>
       <Hero />
-      {/* <Services /> */}
       <Intro />
       <Gallery />
       <Process />
