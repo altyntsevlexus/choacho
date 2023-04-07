@@ -1,6 +1,6 @@
 import React from "react";
 
-import LogoImage from "images/logo.inline.svg";
+import LogoImage from "images/logo-green.inline.svg";
 
 interface Props {
   className?: string;

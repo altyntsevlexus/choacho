@@ -2,8 +2,8 @@
 @import "styles/mixins";
 
 .root {
-  background-color: $primary;
-  background-image: url("~images/hero-shape.svg");
+  background-color: $primary-green;
+  background-image: url("~images/hero-shape-green.svg");
   background-position: center;
   background-size: 90%;
   background-repeat: no-repeat;
@@ -53,6 +53,7 @@
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 100px;
+    color: white;
 
     @media screen and (min-width: 342px) {
       font-size: 48px;

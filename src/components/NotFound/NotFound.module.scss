@@ -1,7 +1,7 @@
 @import "styles/variables";
 
 .root {
-  background-color: $primary;
+  background-color: $primary-green;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -14,16 +14,16 @@
   font-size: 140px;
   line-height: 148px;
   font-weight: 800;
-  color: $primary-dark;
+  color: white;
   text-align: center;
-  text-shadow: 1px 1px 1px $black;
+  text-shadow: 2px 2px 2px $black;
 }
 
 .subtitle {
   font-size: 60px;
   line-height: 68px;
   font-weight: 800;
-  color: $primary-dark;
+  color: white;
   text-align: center;
-  text-shadow: 1px 1px 1px $black;
+  text-shadow: 2px 2px 0px $black;
 }
