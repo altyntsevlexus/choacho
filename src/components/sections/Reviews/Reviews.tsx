@@ -26,14 +26,14 @@ const Reviews = () => (
           </li>
         </ul>
       </div>
-      {/* <iframe
+      <iframe
         src="https://www.instagram.com/cho_a_cho/embed"
         title="instagram"
         loading="lazy"
         height={456}
         width={440}
         className={styles.instagram}
-      /> */}
+      />
     </div>
   </section>
 );
