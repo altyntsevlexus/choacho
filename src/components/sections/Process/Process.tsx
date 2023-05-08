@@ -24,7 +24,9 @@ const Process = () => {
             <li className={styles.item}>
               <Research className={styles.itemImage} height={40} width={40} />
               <div>
-                <h4 className={styles.itemTitle}>Бельгійський шоколад</h4>
+                <h4 className={styles.itemTitle}>
+                  Справжній бельгійський шоколад
+                </h4>
                 <p className={styles.itemDescription}>
                   Бельгійський шоколад це вишуканість та висока якість. Це ручна
                   робота майстрів-кондитерів, які використовують тільки найкращі
@@ -35,7 +37,7 @@ const Process = () => {
             <li className={styles.item}>
               <Briefcase className={styles.itemImage} height={40} width={40} />
               <div>
-                <h4 className={styles.itemTitle}>Корпоративні замовлення</h4>
+                <h4 className={styles.itemTitle}>НЕ такі як всі</h4>
                 <p className={styles.itemDescription}>
                   У Вас є можливість замоивити шоколад у вигляді подарунків для
                   Ваших клієнтів або співробітників.
