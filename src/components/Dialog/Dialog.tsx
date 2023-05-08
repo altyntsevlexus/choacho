@@ -39,36 +39,36 @@ const Dialog = ({ isActive, setIsActive, children }: Props) => {
   }, [handleKeyDown]);
 
   useEffect(() => {
-    if (document) {
-      if (isActive) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
   }, [isActive]);
 
-  return createPortal(
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-    <div
-      className={dialogContainerClassName}
-      onClick={handleDialogClose}
-      onKeyDown={handleKeyDown}
-      role="dialog"
-    >
-      <div className={styles.dialog}>
-        {children}
-        <button
-          type="button"
-          className={styles.close}
+  return typeof document !== `undefined`
+    ? createPortal(
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+        <div
+          className={dialogContainerClassName}
           onClick={handleDialogClose}
+          onKeyDown={handleKeyDown}
+          role="dialog"
         >
-          Закрити
-        </button>
-      </div>
-    </div>,
-    document.getElementById("___gatsby")
-  );
+          <div className={styles.dialog}>
+            {children}
+            <button
+              type="button"
+              className={styles.close}
+              onClick={handleDialogClose}
+            >
+              Закрити
+            </button>
+          </div>
+        </div>,
+        document.getElementById("___gatsby")
+      )
+    : null;
 };
 
 export default Dialog;
