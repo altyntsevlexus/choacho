@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
+import hand from "images/hand.png";
 import Instagram from "images/icons/instagram.inline.svg";
 import Logo from "components/Logo";
 import Dialog from "components/Dialog";
@@ -24,11 +24,7 @@ const Hero = () => {
             Звʼязатись з нами
           </button>
         </div>
-        <StaticImage
-          src="../../../images/hand.png"
-          alt="Рука тримає шоколадку"
-          className={styles.hand}
-        />
+        <img src={hand} alt="Рука тримає шоколадку" className={styles.hand} />
       </div>
       <Dialog setIsActive={setIsDialogActive} isActive={isDialogActive}>
         <div className={styles.contactDetails}>
