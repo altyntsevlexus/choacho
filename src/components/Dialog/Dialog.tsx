@@ -39,10 +39,12 @@ const Dialog = ({ isActive, setIsActive, children }: Props) => {
   }, [handleKeyDown]);
 
   useEffect(() => {
-    if (isActive) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+    if (document) {
+      if (isActive) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
     }
   }, [isActive]);
 
