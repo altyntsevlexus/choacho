@@ -13,11 +13,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 
   @include desktop {
@@ -41,7 +41,7 @@
   }
 
   &Item {
-    list-style-image: url("~images/quote.svg");
+    list-style-image: url("~images/icons/quote.svg");
     padding-left: 12px;
 
     @include tablet {
@@ -63,8 +63,13 @@
   }
 }
 
-.image {
-  margin: 0 auto;
+.instagram {
+  border: none;
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 0;
+  }
 }
 
 .highlightedText {

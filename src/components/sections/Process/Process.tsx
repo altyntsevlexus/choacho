@@ -2,9 +2,9 @@ import React from "react";
 
 import Logo from "components/Logo";
 import useMediaQuery from "hooks/useMediaQuery";
-import Research from "images/research.inline.svg";
-import Briefcase from "images/briefcase.inline.svg";
-import Pen from "images/pen.inline.svg";
+import Research from "images/icons/research.inline.svg";
+import Briefcase from "images/icons/briefcase.inline.svg";
+import Pen from "images/icons/pen.inline.svg";
 
 import * as styles from "./Process.module.scss";
 

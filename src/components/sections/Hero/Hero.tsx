@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import hand from "images/hand.png";
-import Instagram from "images/instagram.inline.svg";
+import Instagram from "images/icons/instagram.inline.svg";
 import Logo from "components/Logo";
 import Dialog from "components/Dialog";
 

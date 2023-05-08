@@ -11,17 +11,21 @@ const Gallery = () => {
   return (
     <section>
       <div className={styles.wrapper}>
-        <StaticImage src="../../../images/gallery-1.jpg" alt="" />
+        <StaticImage src="../../../images/gallery/gallery1.jpg" alt="" />
         <StaticImage
-          src="../../../images/gallery-2.jpg"
+          src="../../../images/gallery/gallery2.jpg"
           className={styles.big}
           alt=""
         />
-        <StaticImage src="../../../images/gallery-3.jpg" alt="" />
-        <StaticImage src="../../../images/gallery-4.jpg" alt="" />
-        {isTablet && <StaticImage src="../../../images/gallery-5.jpg" alt="" />}
-        {isTablet && <StaticImage src="../../../images/gallery-6.jpg" alt="" />}
-        <StaticImage src="../../../images/gallery-7.jpg" alt="" />
+        <StaticImage src="../../../images/gallery/gallery3.jpg" alt="" />
+        <StaticImage src="../../../images/gallery/gallery4.jpg" alt="" />
+        {isTablet && (
+          <StaticImage src="../../../images/gallery/gallery5.jpg" alt="" />
+        )}
+        {isTablet && (
+          <StaticImage src="../../../images/gallery/gallery6.jpg" alt="" />
+        )}
+        <StaticImage src="../../../images/gallery/gallery7.jpg" alt="" />
       </div>
     </section>
   );

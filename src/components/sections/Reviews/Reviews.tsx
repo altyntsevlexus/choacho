@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
 import * as styles from "./Reviews.module.scss";
 
@@ -20,25 +19,20 @@ const Reviews = () => (
                 >
                   інсту
                 </a>{" "}
-                та побачити що насправді про нас говорять справжні люди. Та с
-                ким ми працюємо.
+                та побачити що насправді про нас говорять справжні люди з якими
+                ми працюємо.
               </p>
             </div>
           </li>
         </ul>
       </div>
-      <a
-        href="https://www.instagram.com/cho_a_cho/"
-        target="_blank"
-        rel="noreferrer noopener"
-        className={styles.image}
-      >
-        <StaticImage
-          src="../../../images/instagram.jpg"
-          alt="Instagram"
-          height={600}
-        />
-      </a>
+      <iframe
+        src="https://www.instagram.com/cho_a_cho/embed"
+        title="instagram"
+        height={456}
+        width={440}
+        className={styles.instagram}
+      />
     </div>
   </section>
 );
