@@ -1,0 +1,40 @@
+@import "styles/variables";
+
+.dialog {
+  background-color: $white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &Container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $black, $alpha: 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+    &Active {
+      display: flex;
+    }
+  }
+}
+
+.close {
+  color: $black;
+  padding: 12px;
+  font-size: 20px;
+  line-height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+
+  &:hover {
+    color: $primary;
+  }
+}

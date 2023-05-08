@@ -5,25 +5,25 @@
   background-color: $primary;
   background-image: url("~images/hero-shape.svg");
   background-position: center;
-  background-size: 90%;
+  background-size: 200%;
   background-repeat: no-repeat;
-  height: 600px;
 
-  @include mobile {
-    height: 800px;
+  @include tablet {
+    background-size: 90%;
   }
 }
 
 .wrapper {
   max-width: 1172px;
-  padding: 200px 40px 0;
+  padding: 400px 40px 100px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 
-  @include mobile {
-    padding: 240px 40px 0;
+  @include tablet {
+    padding: 240px 40px;
   }
 }
 
@@ -52,9 +52,9 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 
-    @media screen and (min-width: 342px) {
+    @media screen and (min-width: 362px) {
       font-size: 48px;
       line-height: 56px;
     }
@@ -63,25 +63,49 @@
       font-size: 80px;
       line-height: 88px;
     }
+
+    @include tablet {
+      letter-spacing: -4px;
+    }
   }
 }
 
 .hand {
   position: absolute;
   height: auto;
-  bottom: 0;
-  right: 10%;
-  width: 380px;
+  top: -80px;
+  right: -60px;
+  width: 280px;
+  z-index: 0;
+  transform: rotate(180deg);
+
+  @include tablet {
+    transform: none;
+    top: initial;
+    bottom: 0;
+    width: 380px;
+    right: 10%;
+  }
 }
 
 .contactUs {
   background-color: $white;
-  padding: 12px 28px;
-  font-size: 20px;
-  line-height: 28px;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
   border-radius: 100px;
   border: none;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  z-index: 1;
   cursor: pointer;
+
+  @media screen and (min-width: 362px) {
+    padding: 12px 28px;
+    font-size: 20px;
+    line-height: 28px;
+  }
 
   @include mobile {
     padding: 12px 40px;
@@ -91,5 +115,50 @@
 
   &:hover {
     background-color: #f2f2f2;
+  }
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 8px 8px 0;
+
+  @include tablet {
+    margin: 20px 20px 0;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  &Button {
+    border: 2px solid $primary;
+    color: $black;
+    padding: 12px;
+    font-size: 20px;
+    line-height: 28px;
+    transition-duration: 0.2s;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    @include mobile {
+      width: 360px;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+
+    &:hover {
+      background-color: $primary;
+    }
   }
 }

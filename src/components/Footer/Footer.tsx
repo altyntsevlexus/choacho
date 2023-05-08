@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "components/Logo";
-import Instagram from "images/instagram.inline.svg";
+import Instagram from "images/icons/instagram.inline.svg";
 
 import * as styles from "./Footer.module.scss";
 

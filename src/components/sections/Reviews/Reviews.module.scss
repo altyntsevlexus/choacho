@@ -10,6 +10,15 @@
   padding: 0 20px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   @include desktop {
     padding: 0;
@@ -21,79 +30,54 @@
   font-weight: 800;
   line-height: 48px;
   margin-bottom: 40px;
-  text-align: center;
-
-  @include tablet-big {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0 0 41px;
+  padding: 0 0 0 40px;
 
   @include tablet {
-    padding: 0 41px;
-  }
-
-  @include tablet-big {
-    align-items: initial;
-    flex-direction: row;
+    padding: 0 40px;
   }
 
   &Item {
-    list-style-image: url("~images/quote.svg");
+    list-style-image: url("~images/icons/quote.svg");
     padding-left: 12px;
 
     @include tablet {
       padding-left: 40px;
-    }
-
-    &:first-of-type {
-      margin-bottom: 40px;
-
-      @include tablet {
-        margin: 0;
-      }
     }
   }
 }
 
 .review {
   height: 100%;
-  max-width: 440px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
 
   &Description {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 32px;
     margin-bottom: 20px;
   }
 }
 
-.reviewer {
-  display: flex;
-  align-items: center;
-  margin-top: auto;
+.instagram {
+  border: none;
+  margin-top: 20px;
 
-  &Image {
-    margin-right: 24px;
+  @include tablet {
+    margin-top: 0;
   }
+}
 
-  &Name {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 800;
-  }
+.highlightedText {
+  color: $primary;
+  font-weight: 700;
+  text-decoration: underline;
 
-  &Position {
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 400;
-    opacity: 0.4;
+  &:hover {
+    color: $primary-dark;
   }
 }
