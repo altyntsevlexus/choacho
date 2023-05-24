@@ -7,6 +7,11 @@ export const useSiteMetadata = () => {
         siteMetadata {
           title
           description
+          og {
+            title
+            description
+            url
+          }
         }
       }
     }

@@ -17,8 +17,8 @@
   grid-gap: 1px;
   justify-content: center;
 
-  @include desktop {
-    grid-template-columns: repeat(3, 1fr);
+  @include tablet {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   > svg {
@@ -27,7 +27,7 @@
     width: 100%;
     background: #f9f9f9;
 
-    @include mobile {
+    @include desktop {
       padding: 40px 60px;
     }
   }

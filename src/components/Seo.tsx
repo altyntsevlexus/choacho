@@ -9,8 +9,11 @@ interface Props {
 }
 
 const Seo = ({ title, description, children }: Props) => {
-  const { title: defaultTitle, description: defaultDescription } =
-    useSiteMetadata();
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    og,
+  } = useSiteMetadata();
 
   const seo = {
     title: title || defaultTitle,
@@ -21,6 +24,9 @@ const Seo = ({ title, description, children }: Props) => {
     <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
+      <meta property="og:title" content={og.title} />
+      <meta property="og:description" content={og.description} />
+      <meta property="og:url" content={og.url} />
       {children}
     </>
   );

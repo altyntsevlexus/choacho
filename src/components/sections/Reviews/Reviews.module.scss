@@ -59,6 +59,7 @@
   width: 100%;
 
   @include tablet {
+    margin-left: 8px;
     margin-top: 0;
   }
 }

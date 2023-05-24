@@ -3,8 +3,14 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "Cho A Cho",
-    description: "Cho A Cho - belgium chocolates",
-    siteUrl: "https://www.choacho.com.ua",
+    description:
+      "Cho A Cho - це справжній бельгійский шоколад. Наші шоколадки можна знайти в крамницях та кафе Києва.",
+    og: {
+      title: "Cho A Cho",
+      description:
+        "Cho A Cho - це справжній бельгійский шоколад. Наші шоколадки можна знайти в крамницях та кафе Києва.",
+      url: "https://www.choacho.com.ua",
+    },
   },
   graphqlTypegen: true,
   plugins: [
