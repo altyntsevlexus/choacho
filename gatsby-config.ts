@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icons/logo.inline.svg",
+        icon: "src/images/logo.png",
       },
     },
     {
