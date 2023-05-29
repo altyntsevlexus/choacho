@@ -13,7 +13,7 @@ const Footer = () => (
         <a className={styles.button} href="mailto:choacho57@gmail.com">
           choacho57@gmail.com
         </a>
-        <a className={styles.button} href="tel:0667495569">
+        <a className={styles.button} href="tel:0671385282">
           067 138 52 82
         </a>
       </div>
