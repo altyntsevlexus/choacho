@@ -1,0 +1,15 @@
+{
+  "reasons": "simple reasons to choose our chocolate",
+  "chocolate": {
+    "title": "Real Belgian chocolate",
+    "description": "Belgian chocolate is sophistication and high quality. It is the handwork of confectioners who use only the best ingredients."
+  },
+  "unique": {
+    "title": "NOT like everyone else",
+    "description": "You have the opportunity to order chocolate as gifts for your customers or employees."
+  },
+  "design": {
+    "title": "Special design",
+    "description": "Even from the packaging you can understand what will be delicious. The design of the packaging entices you to buy this chocolate."
+  }
+}

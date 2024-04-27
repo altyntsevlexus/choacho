@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import Logo from "components/Logo";
 import useMediaQuery from "hooks/useMediaQuery";
@@ -10,6 +11,7 @@ import * as styles from "./Process.module.scss";
 
 const Process = () => {
   const isTablet = useMediaQuery("(min-width: 767px)");
+  const { t } = useTranslation("process");
 
   return (
     <section className={styles.root}>
@@ -17,40 +19,33 @@ const Process = () => {
         {isTablet && <Logo size={400} className={styles.logo} />}
         <div className={styles.description}>
           <h3 className={styles.title}>
-            <span className={styles.highlighted}>3</span> прості причини обрати
-            наш шоколад
+            <span className={styles.highlighted}>3</span> {t("reasons")}
           </h3>
           <ul className={styles.list}>
             <li className={styles.item}>
               <Research className={styles.itemImage} height={40} width={40} />
               <div>
-                <h4 className={styles.itemTitle}>
-                  Справжній бельгійський шоколад
-                </h4>
+                <h4 className={styles.itemTitle}>{t("chocolate.title")}</h4>
                 <p className={styles.itemDescription}>
-                  Бельгійський шоколад це вишуканість та висока якість. Це ручна
-                  робота майстрів-кондитерів, які використовують тільки найкращі
-                  інгредієнти.
+                  {t("chocolate.description")}
                 </p>
               </div>
             </li>
             <li className={styles.item}>
               <Briefcase className={styles.itemImage} height={40} width={40} />
               <div>
-                <h4 className={styles.itemTitle}>НЕ такі як всі</h4>
+                <h4 className={styles.itemTitle}>{t("unique.title")}</h4>
                 <p className={styles.itemDescription}>
-                  У Вас є можливість замоивити шоколад у вигляді подарунків для
-                  Ваших клієнтів або співробітників.
+                  {t("unique.description")}
                 </p>
               </div>
             </li>
             <li className={styles.item}>
               <Pen className={styles.itemImage} height={40} width={40} />
               <div>
-                <h4 className={styles.itemTitle}>Особливий дизайн</h4>
+                <h4 className={styles.itemTitle}>{t("design.title")}</h4>
                 <p className={styles.itemDescription}>
-                  Ще з упаковки можна зрозуміти що буде смачно. Дизайн упаковки
-                  так і манить купити цей шоколад.
+                  {t("design.description")}
                 </p>
               </div>
             </li>

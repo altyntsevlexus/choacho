@@ -1,39 +1,42 @@
 import React from "react";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import * as styles from "./Reviews.module.scss";
 
-const Reviews = () => (
-  <section className={styles.root}>
-    <div className={styles.wrapper}>
-      <div>
-        <h3 className={styles.title}>Що про нас кажуть клієнти?</h3>
-        <ul className={styles.list}>
-          <li className={styles.listItem}>
-            <div className={styles.review}>
-              <p className={styles.reviewDescription}>
-                Тут можна було писати що ми такі класні і бла бла бла! Але
-                пропоную заглянути в{" "}
-                <a
-                  href="https://www.instagram.com/cho_a_cho/"
-                  className={styles.highlightedText}
-                >
-                  інсту
-                </a>{" "}
-                та побачити що насправді про нас говорять справжні люди з якими
-                ми працюємо.
-              </p>
-            </div>
-          </li>
-        </ul>
+const Reviews = () => {
+  const { t } = useTranslation("reviews");
+
+  return (
+    <section className={styles.root}>
+      <div className={styles.wrapper}>
+        <div>
+          <h3 className={styles.title}>{t("title")}</h3>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>
+              <div className={styles.review}>
+                <p className={styles.reviewDescription}>
+                  {t("description.start")}
+                  <a
+                    href="https://www.instagram.com/cho_a_cho/"
+                    className={styles.highlightedText}
+                  >
+                    {t("description.inst")}
+                  </a>{" "}
+                  {t("description.end")}
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <iframe
+          src="https://www.instagram.com/cho_a_cho/embed"
+          title="instagram"
+          loading="lazy"
+          className={styles.instagram}
+        />
       </div>
-      <iframe
-        src="https://www.instagram.com/cho_a_cho/embed"
-        title="instagram"
-        loading="lazy"
-        className={styles.instagram}
-      />
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Reviews;

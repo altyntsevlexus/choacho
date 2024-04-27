@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
 import classNames from "classnames";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import * as styles from "./Dialog.module.scss";
 
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const Dialog = ({ isActive, setIsActive, children }: Props) => {
+  const { t } = useTranslation("hero");
   const dialogContainerClassName = classNames(styles.dialogContainer, {
     [styles.dialogContainerActive]: isActive,
   });
@@ -62,7 +64,7 @@ const Dialog = ({ isActive, setIsActive, children }: Props) => {
               className={styles.close}
               onClick={handleDialogClose}
             >
-              Закрити
+              {t("close")}
             </button>
           </div>
         </div>,

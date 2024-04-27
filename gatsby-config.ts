@@ -48,6 +48,23 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`ua`, `en`],
+        defaultLanguage: `ua`,
+        siteUrl: `https://choacho.com.ua`,
+        redirect: false,
+      },
+    },
   ],
 };
 
